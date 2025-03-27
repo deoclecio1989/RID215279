@@ -1,0 +1,239 @@
+html{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #c5dcff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: white;
+    width: 100%;
+    max-width: 50rem;
+    border-radius: .8rem;
+    padding: 1.5rem;
+}
+
+h1{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+
+
+/* .task-list {
+    margin-bottom: 20px;
+} */
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: .8rem;
+    /* padding: 1rem;*/
+    margin-bottom: .5rem; 
+    transition: background-color 0.3s ease;
+}
+.task-item.completed .task-name {
+    color: #8F98A8;
+    text-decoration: line-through;
+}
+
+.complete-btn{
+    background-color: #2D70FD;
+    border: 0;
+    color: white;
+    width: 7.5rem;
+    height: 2.75rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    /* margin-right: 2rem; */
+}
+
+
+.task-name {
+    font-size: 1rem;
+    color: #001747;
+    font-weight: 500;
+}
+
+:focus-visible{
+    outline: 2px solid #007bff;
+}
+
+
+.task-tag {
+    font-size: .75rem;
+    color: #B1BACB;
+    border: 1px solid #B1BACB;
+    border-radius: .8rem;
+    padding: .2rem .4rem;
+}
+
+.task-date{
+    font-size: .87rem;
+    color: #B1BACB;
+    margin-left: 1rem;
+}
+
+.task-left{
+    width: 100%;
+    margin: 1.5rem .5rem 1.5rem 2rem;
+}
+
+.task-right {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    max-width: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+.task-action button, .task-action input {
+    background-color: #2D70FD;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* .task-action input[type="checkbox"] {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    color: #28a745;
+    border-radius: 50%;
+    display: none;
+} */
+
+.complete-checkbox{
+    appearance: none;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #00D8A7;
+    border-radius: 50%;
+}
+
+input[type=checkbox]::before {
+    content: '\2713';
+    color: #fff;
+    font-size: 1.8rem;
+    padding-left: .5rem;
+}
+
+
+.form-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    gap: .8rem;
+}
+
+.form-container input {
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: .4rem;
+    color: #001747;
+    border: 1px solid #B1BACB;
+    padding: 0 0 0 1.5rem;
+}
+
+.form-container button {
+    background-color: #007bff;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    width: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: .4rem;
+}
+
+.form-container input[type="text"] {
+    flex-grow: 1;
+}
+
+.divider {
+    margin: 1.5rem 0;
+    border-top: 1px solid #ddd;
+}
+
+.task-count {
+    display: flex;
+    /* text-align: right; */
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #B1BACB;
+}
+
+
+.clear-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .4rem;
+}
+
+.clear-btn:hover {
+    opacity: 75%;
+}
+
+@media screen and (max-width: 767px) {
+    .form-container, .task-item{
+        flex-direction: column;
+    }
+    .form-container button{
+        width: 100%;
+        height: 2.8rem;
+        border: 0;
+    }
+    .task-left{
+        margin-bottom: 0;
+    }
+    .complete-btn, .complete-checkbox{
+        margin-bottom: 1.5rem;
+    }
+    .info{
+        display: grid;
+        grid-template-columns: auto;
+        gap: .5rem;
+        
+    }
+    .task-date{
+        margin: 0;
+        width: 100%;
+    }
+    .task-tag{
+        width: fit-content;
+    }
+    .task-count{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
